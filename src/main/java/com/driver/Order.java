@@ -13,7 +13,7 @@ public class Order {
         //deliveryTime  = HH*60 + MM
         this.id = id;
         String hh = deliveryTime.substring(0,2);
-        String mm = deliveryTime.substring(2);
+        String mm = deliveryTime.substring(3,5);
         int h = Integer.parseInt(hh) * 60;
         int m = Integer.parseInt(mm);
         this.deliveryTime = h + m;
