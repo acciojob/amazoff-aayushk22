@@ -62,9 +62,7 @@ public class OrderRepository {
     }
 
     public List<String> getOrdersByPartnerId(String partnerId) {
-        if (!partnerOrderHashMap.containsKey(partnerId)) {
-            return null;
-        }
+
         List<Order> list = partnerOrderHashMap.get(partnerId);
         List<String> orders = new ArrayList<>();
         for (Order o: list) {
