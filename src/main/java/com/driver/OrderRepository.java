@@ -148,7 +148,7 @@ public class OrderRepository {
             mm = String.valueOf(m);
         }
 
-        return hh + ":" + mm;
+        return hh + mm;
     }
 
     public void deletePartnerById(String partnerId) {
