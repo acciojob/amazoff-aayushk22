@@ -131,20 +131,30 @@ public class OrderRepository {
         int h = time/60;
         int m = time%60;
 
-        String hh = "";
-        String mm = "";
-        if (m >= 0 && m <=9) {
-            mm = "0" + String.valueOf(m);
-        }
-        else {
-            mm = String.valueOf(m);
+//        String hh = "";
+//        String mm = "";
+//        if (m >= 0 && m <=9) {
+//            mm = "0" + String.valueOf(m);
+//        }
+//        else {
+//            mm = String.valueOf(m);
+//        }
+//
+//        if (h >= 0 && h <=9) {
+//             hh = "0" + String.valueOf(m);
+//        }
+//        else {
+//            hh = String.valueOf(m);
+//        }
+        String hh = ""+h;
+        String mm = ""+m;
+
+        if (hh.length() == 1) {
+            hh = '0' + hh;
         }
 
-        if (h >= 0 && h <=9) {
-             hh = "0" + String.valueOf(m);
-        }
-        else {
-            hh = String.valueOf(m);
+        if (mm.length() == 1) {
+            mm = '0' + mm;
         }
 
         return hh + ":" + mm;
